@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DriveSharp</string>
+    <string name="title_activity_add_detials">AddDetialsActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="number_1">Number 1</string>
+    <string name="number_2">Number 2</string>
+    <string name="update_num_text">UPDATE NUMBERS</string>
+    <string name="emergencymsg">Emergency Message</string>
+    <string name="emergencymsg_desc">This message will be sent to the SOS numbers specified above when the driver drowsiness is detected.</string>
+    <string name="update_msg_text">UPDATE EMERGENCY MESSAGE</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="slp_cyc"> Driver\'s Sleep Cycle</string>
+    <string name="update_slp_text">UPDATE DRIVER\'S SLEEP CYCLE</string>
+    <string name="start_capture">Start Capture</string>
+    <string name="stop_capture">Stop Capture</string>
+
+</resources>
