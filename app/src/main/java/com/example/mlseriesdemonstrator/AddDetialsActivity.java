@@ -20,10 +20,9 @@ import androidx.navigation.ui.NavigationUI;
 
 
 public class AddDetialsActivity extends AppCompatActivity {
-//    Toast.makeText()
-//    SharedPreferences sharedPreferences = getSharedPreferences("MyPreference",MODE_PRIVATE);
-//
-//    SharedPreferences.Editor myEdit = sharedPreferences.edit();
+   SharedPreferences sharedPreferences = getSharedPreferences("MyPreference",MODE_PRIVATE);
+
+   SharedPreferences.Editor myEdit = sharedPreferences.edit();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -36,15 +35,15 @@ public class AddDetialsActivity extends AppCompatActivity {
 
         TextView num1 = (TextView) findViewById(R.id.num1) ;
         TextView num2 = (TextView) findViewById(R.id.num2) ;
-//        myEdit.putString("num1", num1.toString());
-//        myEdit.putString("num2", num1.toString());
-//        myEdit.commit();
+       myEdit.putString("num1", num1.toString());
+       myEdit.putString("num2", num1.toString());
+       myEdit.commit();
     }
     public void saveMsg(View V){
 
         TextView msg = (TextView) findViewById(R.id.emergencymessage) ;
-//        myEdit.putString("msg", msg.toString());
-//        myEdit.commit();
+       myEdit.putString("msg", msg.toString());
+       myEdit.commit();
     }
 
 }
