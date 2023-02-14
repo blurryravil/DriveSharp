@@ -38,6 +38,9 @@ import java.util.Locale;
 
 /** Face Drowsiness Detector Demo. */
 public class FaceDrowsinessDetectorProcessor extends VisionBaseProcessor<List<Face>> {
+  
+  SharedPreferences sharedPreferences = getSharedPreferences("MyPreference",MODE_PRIVATE);
+  SharedPreferences.Editor myEdit = sharedPreferences.edit();
 
   private static final String MANUAL_TESTING_LOG = "FaceDetectorProcessor";
 
@@ -92,8 +95,11 @@ public class FaceDrowsinessDetectorProcessor extends VisionBaseProcessor<List<Fa
                   Overlay.add(faceGraphic);
                   if(isDrowsy == true) {
                     SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage("+919198364979", null, "Automated Message : Driver Is Drowsy Right Now", null, null);
-                    smsManager.sendTextMessage("+916305611754", null, "Automated Message : Driver Is Drowsy Right Now", null, null);
+                    String num1 = myEdit.getString("num1", "");
+                    String num2 = myEdit.getString("num2", "");
+                    String msg = myEdit.getString("msg", "");
+                    smsManager.sendTextMessage(num1, null, msg, null, null);
+                    smsManager.sendTextMessage(num2, null, msg, null, null);
                     ToneGenerator toneG = new ToneGenerator(AudioManager.STREAM_ALARM, 100);
                     toneG.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 1000);
                   }
