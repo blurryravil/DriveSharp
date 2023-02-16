@@ -60,10 +60,10 @@ model.compile(optimizer="adam",loss="binary_crossentropy",metrics=["accuracy"])
 
 results = model.fit_generator(train_datagen,validation_data=test_datagen,epochs=10,steps_per_epoch=SPE,validation_steps=VS)
 
-# model.save("CNN__model.h5")
+model.save("CNN__model.h5")
 
-# lite_model = tf.keras.models.load_model('CNN__model.h5')
-# converter = tf.lite.TFLiteConverter.from_keras_model(lite_model)
-# tflmodel = converter.convert()
-# file = open( 'model.tflite' , 'wb' ) 
-# file.write( tflmodel )
+lite_model = tf.keras.models.load_model('CNN__model.h5')
+converter = tf.lite.TFLiteConverter.from_keras_model(lite_model)
+tflmodel = converter.convert()
+file = open( 'model.tflite' , 'wb' ) 
+file.write( tflmodel )
