@@ -28,4 +28,4 @@ The user can :
 Android device with camera and a working SIM card
 
 ### Instructions:
-You can download the .apk by clicking here and simply run the app in your Android device.
+You can download the .apk and simply run the app in your Android device.
